@@ -1,12 +1,24 @@
-from django.shortcuts import render
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
+from django.shortcuts import render
+from models import FpsData
+import json
 # Create your views here.
 
 def home(request):
     return render(request, 'home.html')
 
+"""
+用于获取fps数据
+"""
+
+
 def get_fps(request):
-    return render(request, 'get_fps.html')
+    fps_list = FpsData().get_all_data()
+    print fps_list
+    return render(request, 'get_fps.html', {'fps_list': json.dumps(fps_list)})
+
 
 def get_memory(request):
     return render(request, 'get_memory.html')

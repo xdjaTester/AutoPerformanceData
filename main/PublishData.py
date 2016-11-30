@@ -4,11 +4,11 @@ import os, sys
 import django
 BaseDir = os.path.dirname(os.path.abspath(os.getcwd()))
 sys.path.append(BaseDir)
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "performanceWeb.performanceWeb.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "AutoPerformanceData.settings")
 django.setup()
 
 from CollectData import CollectData
-from performanceWeb.performance.models import FpsData
+from performance.models import FpsData
 import common.GlobalConfig as config
 __author__ = 'zhouliwei'
 
