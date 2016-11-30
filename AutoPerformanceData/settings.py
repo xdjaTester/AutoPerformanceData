@@ -51,7 +51,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'performanceData.urls'
+ROOT_URLCONF = 'AutoPerformanceData.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'performanceData.wsgi.application'
+WSGI_APPLICATION = 'AutoPerformanceData.wsgi.application'
 
 
 # Database
